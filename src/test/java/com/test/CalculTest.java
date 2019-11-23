@@ -11,20 +11,36 @@ public class CalculTest {
 
 	@Test
 	public void testAddition() {
-		assertEquals("bon", calc.addition(23, 43));
+		assertTrue("a et b positif", calc.addition(23, 35) == 23+35);
 	}
 
 	@Test
 	public void testMultiplication() {
+		assertTrue("normal", calc.multiplication(1200, 4500)== 1200*4500);
 		
-		fail("Not yet implemented");
 	}
 	@Test
-	public void testDouble()
+	public void testLettreAdd()
 	{
-		
+		assertEquals("", calc.addition('a', 'x'));
 	}
 	
+	@Test
+	public void testLettreDoubleAdd()
+	{
+		assertEquals("", calc.addition(234, 'x'));
+	}
+	
+	@Test
+	public void testLettreMult()
+	{
+		assertEquals("echec", calc.multiplication('f', 's'));
+	}
+	@Test
+	public void testLettreDoubleMult()
+	{
+		assertEquals("", calc.multiplication(234, 'x'));
+	}
 
 
 }
